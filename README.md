@@ -10,6 +10,18 @@ not a set of disconnected tools.
 
 **DETECT → TRACE → CORRELATE → INVESTIGATE → REPORT**
 
+## Live Demo
+
+**[https://sih-2026-b67y.vercel.app](https://sih-2026-b67y.vercel.app)** — the deployed production
+demo. Open it directly in a browser; no setup, no account, and no API keys are required (Demo Mode
+is on by default). See [DEMO.md](DEMO.md) for the guided judge walkthrough.
+
+| | |
+|---|---|
+| **Live Demo** (primary) | **[sih-2026-b67y.vercel.app](https://sih-2026-b67y.vercel.app)** |
+| Backend API | [sih-2026-red.vercel.app](https://sih-2026-red.vercel.app) |
+| API Health | [sih-2026-red.vercel.app/api/v1/health](https://sih-2026-red.vercel.app/api/v1/health) |
+
 See [ARCHITECTURE.md](ARCHITECTURE.md) for design details, [API.md](API.md) for the endpoint
 reference, [DEMO.md](DEMO.md) for the judge demonstration script, and
 [DEPLOYMENT.md](DEPLOYMENT.md) for the Supabase + Vercel production deployment walkthrough.
