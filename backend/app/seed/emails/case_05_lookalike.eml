@@ -1,0 +1,32 @@
+Received: from mx.personalmail-example.com (mx.personalmail-example.com [172.16.5.9])
+	by mailstore.personalmail-example.com with LMTP id 77aa88bb;
+	Sat, 12 Sep 2026 19:44:12 +0000
+Received: from mail.eastern-euro-hosting.net (mail.eastern-euro-hosting.net [91.219.237.244])
+	by mx.personalmail-example.com with ESMTPS id 88bb99cc;
+	Sat, 12 Sep 2026 19:43:50 +0000
+Authentication-Results: mx.personalmail-example.com; spf=fail smtp.mailfrom=paypa1-secure-center.com; dkim=fail; dmarc=fail
+From: "PayPal Security" <service@paypa1-secure-center.com>
+To: user.mailbox@personalmail-example.com
+Return-Path: <bounce@paypa1-secure-center.com>
+Subject: Your account has been limited - Action required
+Date: Sat, 12 Sep 2026 19:44:10 +0000
+Message-ID: <sec-alert-88213@paypa1-secure-center.com>
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+
+Dear Customer,
+
+Suspicious activity detected on your account. Your account access has been
+limited. To restore full access, you must verify your identity within 48
+hours.
+
+Click here to confirm your account details:
+
+http://paypa1-secure-center.com/verify?session=88213
+
+Failure to verify may result in permanent account closure and legal action
+to recover any outstanding balance.
+
+Do not share this email with anyone.
+
+PayPal Security Team

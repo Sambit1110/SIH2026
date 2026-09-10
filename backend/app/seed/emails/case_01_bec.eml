@@ -1,0 +1,42 @@
+Received: from mailstore-internal.northbridge-financial.com (mailstore-internal.northbridge-financial.com [10.10.4.12])
+	by mx1.northbridge-financial.com with LMTP id ab12cd34;
+	Tue, 08 Sep 2026 09:14:20 +0000
+Received: from smtp-relay.suspicious-host.net (smtp-relay.suspicious-host.net [193.106.31.98])
+	by mx1.northbridge-financial.com with ESMTPS id cd34ef56;
+	Tue, 08 Sep 2026 09:13:05 +0000
+Received: from [193.106.31.98] (unknown [193.106.31.98])
+	by smtp-relay.suspicious-host.net with ESMTP id ef56ab78;
+	Tue, 08 Sep 2026 09:12:10 +0000
+Authentication-Results: mx.northbridge-financial.com; spf=fail smtp.mailfrom=northbridge-finantial.com; dkim=fail; dmarc=fail
+From: "David Whitfield - CEO" <d.whitfield@northbridge-finantial.com>
+To: cfo@northbridge-financial.com
+Reply-To: d.whitfield@post-secure-mail.com
+Return-Path: <bounce@northbridge-finantial.com>
+Subject: Urgent - Confidential Wire Transfer Required Today
+Date: Tue, 08 Sep 2026 09:14:22 +0000
+Message-ID: <a1b2c3d4@mail.northbridge-finantial.com>
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+
+David,
+
+This is urgent and requires your immediate action. On behalf of the CEO, I am
+reaching out regarding a confidential acquisition that cannot be discussed
+over the phone right now. Please keep this confidential and do not discuss
+this with anyone on the finance team.
+
+We need to wire the funds for the acquisition escrow today. This is our new
+beneficiary account for the transfer:
+
+Bank: Meridian Trust International
+Account Name: Meridian Holdings Escrow
+Account Number: 8823410099
+SWIFT: MTIBUS44
+
+Please update account details in the system and process this payment
+urgently within 24 hours.
+
+Regards,
+David Whitfield
+Chief Executive Officer
+Northbridge Financial Group

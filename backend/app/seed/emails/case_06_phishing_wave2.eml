@@ -1,0 +1,30 @@
+Received: from mx1.northbridge-financial.com (mx1.northbridge-financial.com [10.10.4.12])
+	by mailstore.northbridge-financial.com with LMTP id 99aa88bb;
+	Wed, 09 Sep 2026 21:40:05 +0000
+Received: from mail-out.bulletproof-hosting.net (mail-out.bulletproof-hosting.net [45.155.204.63])
+	by mx1.northbridge-financial.com with ESMTPS id 88bb77cc;
+	Wed, 09 Sep 2026 21:39:41 +0000
+Authentication-Results: mx.northbridge-financial.com; spf=fail smtp.mailfrom=micros0ft-support.com; dkim=fail; dmarc=fail
+From: "Microsoft Account Team" <security-noreply@micros0ft-support.com>
+To: finance.team@northbridge-financial.com
+Return-Path: <bounce@micros0ft-support.com>
+Subject: Your password expires today - Immediate action required
+Date: Wed, 09 Sep 2026 21:39:58 +0000
+Message-ID: <a2b3c4d5@micros0ft-support.com>
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+
+Dear User,
+
+Your Microsoft 365 password expires today. Unusual sign-in activity was
+also detected on your account from an unrecognized device. Your account
+will be suspended within 24 hours if no action is taken.
+
+To keep your account active, please click here to confirm your identity
+and reset your password now:
+
+http://microsoft-verify-account.xyz/reset-password?user=finance.team&token=9c4e7a
+
+This is time-sensitive. Please verify your account immediately.
+
+Microsoft Account Team

@@ -1,0 +1,50 @@
+-- Creates the private Storage bucket Trace-X uses for evidence (.eml) files.
+--
+-- `public = false` is the important part: this bucket is never readable via
+-- a public URL. The FastAPI backend uploads/downloads through the Storage
+-- REST API using SUPABASE_SERVICE_ROLE_KEY (see
+-- app/core/storage/providers.py), which authenticates as the Supabase
+-- `service_role` and bypasses Storage RLS/policies entirely by design.
+--
+-- `on conflict ... do update set public = false` rather than `do nothing`:
+-- makes this idempotent AND self-correcting even if a bucket named
+-- 'evidence' already exists (e.g. created by hand via the dashboard and
+-- accidentally left public) -- re-running this migration always leaves the
+-- bucket private.
+--
+-- If SUPABASE_STORAGE_BUCKET is changed from the default, update the name
+-- below (and re-run) to match.
+insert into storage.buckets (id, name, public)
+values ('evidence', 'evidence', false)
+on conflict (id) do update set public = false;
+
+-- No ALTER TABLE / CREATE POLICY / DROP POLICY statements on
+-- storage.objects here, deliberately -- an earlier version of this
+-- migration had them and failed on a real Supabase project with
+-- `42501: must be owner of table objects`. storage.objects is owned by
+-- Supabase's own internal supabase_storage_admin role, not by the
+-- `postgres` role your SQL Editor session runs as; in Postgres, enabling/
+-- disabling RLS and creating/dropping policies on a table both require
+-- ownership of that table, with no workaround available to a non-owner --
+-- this is Postgres's own access-control rule, not a Supabase restriction to
+-- route around.
+--
+-- Nothing of substance is lost by removing them:
+--   - Supabase enables RLS on storage.objects itself, for every project, by
+--     default, before any user SQL runs. It cannot be (and does not need to
+--     be) turned on again here.
+--   - With RLS on and zero permissive policies for the `anon` /
+--     `authenticated` roles, Postgres denies those roles by default -- the
+--     same "no client access to the evidence bucket" outcome a hand-written
+--     deny policy would have produced, achieved for free by not granting
+--     access rather than by explicitly forbidding it.
+--   - `service_role` (the only credential this backend ever uses for
+--     Storage -- see SUPABASE_SERVICE_ROLE_KEY) bypasses RLS entirely by
+--     design, on every table, unconditionally. Whether or not a policy
+--     exists here has zero effect on the backend's own access.
+--
+-- Net result: identical security posture (private bucket, service-role
+-- backend access, everyone else denied), reached with a migration that
+-- actually runs on a real Supabase project -- see requirement 7: a policy
+-- that exists only for dashboard cosmetics isn't worth a migration that
+-- fails to apply.

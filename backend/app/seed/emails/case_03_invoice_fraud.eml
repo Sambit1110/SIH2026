@@ -1,0 +1,35 @@
+Received: from mx1.northbridge-financial.com (mx1.northbridge-financial.com [10.10.4.12])
+	by mailstore.northbridge-financial.com with LMTP id 33cc44dd;
+	Thu, 10 Sep 2026 11:20:55 +0000
+Received: from smtp.mtn-mobile-relay.net (smtp.mtn-mobile-relay.net [102.129.145.77])
+	by mx1.northbridge-financial.com with ESMTPS id 44dd55ee;
+	Thu, 10 Sep 2026 11:20:30 +0000
+Authentication-Results: mx.northbridge-financial.com; spf=softfail smtp.mailfrom=globalsupply-vendors-billing.com; dkim=none; dmarc=fail
+From: "GlobalSupply Vendors Accounts" <accounts@globalsupply-vendors.com>
+To: payables@northbridge-financial.com
+Reply-To: accounts@globalsupply-vendors-billing.com
+Return-Path: <bounce@globalsupply-vendors-billing.com>
+Subject: Overdue Invoice - Updated Bank Details for Payment
+Date: Thu, 10 Sep 2026 11:20:52 +0000
+Message-ID: <99887766@globalsupply-vendors-billing.com>
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+
+Dear Accounts Payable,
+
+Please see attached invoice for services rendered last quarter. This is now
+an overdue invoice and your outstanding balance requires urgent attention.
+
+We have updated bank details for remittance advice. Please wire the payment
+to our new beneficiary account at your earliest convenience:
+
+Bank: Continental Trust Bank
+Account Name: GlobalSupply Vendors Ltd
+Account Number: 0091837465
+SWIFT: CTBKNGLA
+
+Please confirm once the payment has been processed.
+
+Best regards,
+Accounts Receivable Team
+GlobalSupply Vendors

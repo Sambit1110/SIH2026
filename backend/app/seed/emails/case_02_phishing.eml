@@ -1,0 +1,30 @@
+Received: from mx1.northbridge-financial.com (mx1.northbridge-financial.com [10.10.4.12])
+	by mailstore.northbridge-financial.com with LMTP id 11aa22bb;
+	Wed, 09 Sep 2026 14:02:40 +0000
+Received: from mail-out.bulletproof-hosting.net (mail-out.bulletproof-hosting.net [45.155.204.63])
+	by mx1.northbridge-financial.com with ESMTPS id 22bb33cc;
+	Wed, 09 Sep 2026 14:02:15 +0000
+Authentication-Results: mx.northbridge-financial.com; spf=fail smtp.mailfrom=micros0ft-support.com; dkim=fail; dmarc=fail
+From: "Microsoft Account Team" <security-noreply@micros0ft-support.com>
+To: employee@northbridge-financial.com
+Return-Path: <bounce@micros0ft-support.com>
+Subject: [Action Required] Unusual sign-in activity detected on your account
+Date: Wed, 09 Sep 2026 14:02:11 +0000
+Message-ID: <f1e2d3c4@micros0ft-support.com>
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+
+Dear User,
+
+We detected unusual sign-in activity on your Microsoft 365 account from an
+unrecognized device. If you do not recognize this activity, your account
+will be suspended within 24 hours.
+
+To verify your account and prevent suspension, please click here to confirm
+your identity:
+
+http://microsoft-verify-account.xyz/secure-login?user=employee&token=8f2e1c
+
+This is time-sensitive. Please verify your account immediately.
+
+Microsoft Account Team

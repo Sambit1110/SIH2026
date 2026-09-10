@@ -1,0 +1,44 @@
+{
+  "193.106.31.98": {
+    "country": "Russia", "region": "Moscow Oblast", "city": "Moscow",
+    "lat": 55.7558, "lon": 37.6173, "isp": "SmartApe LLC", "asn": "AS210644",
+    "org": "SmartApe Hosting", "network_type": "datacenter",
+    "reputation": "SUSPICIOUS", "proxy_vpn_tor": "UNKNOWN"
+  },
+  "45.155.204.63": {
+    "country": "Netherlands", "region": "North Holland", "city": "Amsterdam",
+    "lat": 52.3676, "lon": 4.9041, "isp": "Alsycon B.V.", "asn": "AS62240",
+    "org": "Clouvider / Bulletproof Hosting Range", "network_type": "datacenter",
+    "reputation": "MALICIOUS", "proxy_vpn_tor": "LIKELY_PROXY"
+  },
+  "102.129.145.77": {
+    "country": "Nigeria", "region": "Lagos", "city": "Lagos",
+    "lat": 6.5244, "lon": 3.3792, "isp": "MTN Nigeria Communications", "asn": "AS29465",
+    "org": "MTN Nigeria", "network_type": "residential",
+    "reputation": "SUSPICIOUS", "proxy_vpn_tor": "NO"
+  },
+  "164.100.128.14": {
+    "country": "India", "region": "Delhi", "city": "New Delhi",
+    "lat": 28.6139, "lon": 77.2090, "isp": "National Informatics Centre", "asn": "AS132003",
+    "org": "NIC - Government of India Network", "network_type": "corporate",
+    "reputation": "CLEAN", "proxy_vpn_tor": "NO"
+  },
+  "91.219.237.244": {
+    "country": "Ukraine", "region": "Kyiv Oblast", "city": "Kyiv",
+    "lat": 50.4501, "lon": 30.5234, "isp": "FlokiNET sro", "asn": "AS200651",
+    "org": "FlokiNET Bulletproof Range", "network_type": "datacenter",
+    "reputation": "MALICIOUS", "proxy_vpn_tor": "LIKELY_PROXY"
+  },
+  "10.10.4.12": {
+    "country": "Unknown", "region": "Private Network", "city": "Private Network",
+    "lat": null, "lon": null, "isp": "Internal / RFC1918 Private Range", "asn": "N/A",
+    "org": "Internal Mail Gateway", "network_type": "private",
+    "reputation": "N/A", "proxy_vpn_tor": "N/A"
+  },
+  "172.16.5.9": {
+    "country": "Unknown", "region": "Private Network", "city": "Private Network",
+    "lat": null, "lon": null, "isp": "Internal / RFC1918 Private Range", "asn": "N/A",
+    "org": "Internal Mail Gateway", "network_type": "private",
+    "reputation": "N/A", "proxy_vpn_tor": "N/A"
+  }
+}

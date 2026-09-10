@@ -1,0 +1,44 @@
+{
+  "northbridge-finantial.com": {
+    "registrar": "NiceNIC International Group Co.", "created_date": "2026-08-14",
+    "nameservers": ["ns1.dns-parking.com", "ns2.dns-parking.com"],
+    "mx": ["mail.northbridge-finantial.com"], "spf_record": "v=spf1 include:spf.suspicious-relay.net ~all",
+    "reputation": "SUSPICIOUS"
+  },
+  "northbridge-financial.com": {
+    "registrar": "MarkMonitor Inc.", "created_date": "2011-03-02",
+    "nameservers": ["ns1.northbridge-financial.com", "ns2.northbridge-financial.com"],
+    "mx": ["mx1.northbridge-financial.com"], "spf_record": "v=spf1 include:_spf.google.com ~all",
+    "reputation": "CLEAN"
+  },
+  "microsoft-verify-account.xyz": {
+    "registrar": "Reg.Ru LLC", "created_date": "2026-09-01",
+    "nameservers": ["ns1.freehosting-dns.com", "ns2.freehosting-dns.com"],
+    "mx": ["mail.microsoft-verify-account.xyz"], "spf_record": "v=spf1 +all",
+    "reputation": "MALICIOUS"
+  },
+  "globalsupply-vendors-billing.com": {
+    "registrar": "Alibaba Cloud Computing Ltd.", "created_date": "2026-07-22",
+    "nameservers": ["ns1.hichina.com", "ns2.hichina.com"],
+    "mx": ["mail.globalsupply-vendors-billing.com"], "spf_record": "v=spf1 include:spf.mailrelay-cheap.com ~all",
+    "reputation": "SUSPICIOUS"
+  },
+  "globalsupply-vendors.com": {
+    "registrar": "GoDaddy.com, LLC", "created_date": "2016-05-19",
+    "nameservers": ["ns1.globalsupply-vendors.com", "ns2.globalsupply-vendors.com"],
+    "mx": ["mx.globalsupply-vendors.com"], "spf_record": "v=spf1 include:_spf.protection.outlook.com ~all",
+    "reputation": "CLEAN"
+  },
+  "iitdelhi.ac.in": {
+    "registrar": "ERNET India", "created_date": "1995-11-01",
+    "nameservers": ["ns1.iitd.ac.in", "ns2.iitd.ac.in"],
+    "mx": ["mail.iitdelhi.ac.in"], "spf_record": "v=spf1 include:_spf.iitdelhi.ac.in ~all",
+    "reputation": "CLEAN"
+  },
+  "paypa1-secure-center.com": {
+    "registrar": "PublicDomainRegistry.com", "created_date": "2026-09-05",
+    "nameservers": ["ns1.bulletproof-dns.net", "ns2.bulletproof-dns.net"],
+    "mx": ["mail.paypa1-secure-center.com"], "spf_record": "v=spf1 +all",
+    "reputation": "MALICIOUS"
+  }
+}

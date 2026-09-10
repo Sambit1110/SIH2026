@@ -1,0 +1,35 @@
+Received: from webmail.iitdelhi.ac.in (webmail.iitdelhi.ac.in [10.10.4.12])
+	by mailstore.northbridge-financial.com with LMTP id 55ee66ff;
+	Fri, 11 Sep 2026 08:05:40 +0000
+Received: from mx.iitdelhi.ac.in (mx.iitdelhi.ac.in [164.100.128.14])
+	by mailstore.northbridge-financial.com with ESMTPS id 66ff77aa;
+	Fri, 11 Sep 2026 08:05:10 +0000
+Authentication-Results: mx.northbridge-financial.com; spf=pass smtp.mailfrom=iitdelhi.ac.in; dkim=pass; dmarc=pass
+From: "Office of the Registrar" <registrar@iitdelhi.ac.in>
+To: student.2026@iitdelhi.ac.in
+Return-Path: <registrar@iitdelhi.ac.in>
+Subject: Semester Registration Confirmation - Autumn 2026
+Date: Fri, 11 Sep 2026 08:05:38 +0000
+Message-ID: <regconfirm-2026-autumn@iitdelhi.ac.in>
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+
+Dear Student,
+
+This email confirms that your registration for the Autumn Semester 2026 has
+been successfully processed by the Office of Academic Affairs.
+
+Course Registration Summary:
+- Program: B.Tech Computer Science and Engineering
+- Semester: 7
+- Registered Credits: 21
+
+You can view your complete timetable and course list through the student
+information portal using your existing institute credentials.
+
+If you have any questions about your registration, please visit the
+Academic Affairs office during working hours or reply to this email.
+
+Regards,
+Office of the Registrar
+Indian Institute of Technology Delhi
