@@ -13,6 +13,12 @@ os.environ["DATABASE_URL"] = "sqlite:///./test_trace_x.db"
 # uploading every test run's synthetic evidence to the real Storage bucket.
 os.environ["SUPABASE_URL"] = ""
 os.environ["SUPABASE_SERVICE_ROLE_KEY"] = ""
+# Same hermeticity concern as the Supabase vars above: whatever INTEL_MODE
+# happens to be set to in a developer's local .env (or in production, once
+# INTEL_MODE=live), the test suite must never make real network calls to
+# ip-api.com / rdap.org / live DNS -- it must stay fully offline and
+# deterministic regardless.
+os.environ["INTEL_MODE"] = "demo"
 
 import pytest
 from fastapi.testclient import TestClient

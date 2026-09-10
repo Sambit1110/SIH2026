@@ -28,7 +28,7 @@ export default function SettingsPage() {
                 <Badge variant="soft">{data?.intel_mode === "live" ? "Live" : "Demo"}</Badge>
                 <span className="text-sm text-[var(--text-muted)]">
                   {data?.intel_mode === "live"
-                    ? "Live IP geolocation and RDAP domain lookups are attempted, with automatic fallback to demo data on any failure or timeout."
+                    ? "Live IP geolocation/hosting (ip-api.com), domain registration (RDAP), and DNS MX/SPF lookups are attempted for every newly observed IP or domain, with automatic fallback to demo data only when a lookup genuinely fails. No live reputation/blacklist check is wired up yet, so reputation stays \"Unknown\" for live results."
                     : "All IP and domain intelligence comes from a deterministic, versioned demo dataset. No external network calls are made."}
                 </span>
               </div>
