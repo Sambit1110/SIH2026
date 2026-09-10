@@ -5,6 +5,7 @@ scoring -> persistence -> timeline events.
 """
 from __future__ import annotations
 
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 
 from sqlalchemy.orm import Session
@@ -149,11 +150,34 @@ def analyze_email(
     geo_provider = get_geoip_provider()
     domain_provider = get_domain_intel_provider()
 
+    # In live mode, each cache-miss lookup is a real, blocking network call
+    # (~1-2s to ip-api.com / rdap.org / DNS). Running these sequentially, one
+    # per IP/domain in the email, made total request time scale with the
+    # number of distinct indicators -- an email with several new domains
+    # could push a single upload past the serverless function's execution
+    # limit. All lookups for this request are independent of each other, so
+    # they're run concurrently (bounded pool) instead; wall-clock time is
+    # then ~one lookup's latency regardless of how many indicators there are.
+    new_ips = [ip for ip in all_ips if not db.query(models.IPIntel).filter(models.IPIntel.ip == ip).first()]
+    new_domains = [d for d in domains if not db.query(models.DomainIntel).filter(models.DomainIntel.domain == d).first()]
+
+    geo_results: dict[str, dict] = {}
+    domain_results: dict[str, dict] = {}
+    if new_ips or new_domains:
+        pool_size = min(10, len(new_ips) + len(new_domains))
+        with ThreadPoolExecutor(max_workers=pool_size) as pool:
+            geo_futures = {pool.submit(geo_provider.lookup, ip): ip for ip in new_ips}
+            domain_futures = {pool.submit(domain_provider.lookup, d): d for d in new_domains}
+            for future, ip in geo_futures.items():
+                geo_results[ip] = future.result()
+            for future, d in domain_futures.items():
+                domain_results[d] = future.result()
+
     ip_intel_records = []
     for ip in all_ips:
         record = db.query(models.IPIntel).filter(models.IPIntel.ip == ip).first()
         if not record:
-            data = geo_provider.lookup(ip)
+            data = geo_results[ip]
             record = models.IPIntel(ip=ip, **{k: v for k, v in data.items() if k != "ip"})
             db.add(record)
             db.flush()
@@ -168,7 +192,7 @@ def analyze_email(
     for d in domains:
         record = db.query(models.DomainIntel).filter(models.DomainIntel.domain == d).first()
         if not record:
-            data = domain_provider.lookup(d)
+            data = domain_results[d]
             record = models.DomainIntel(domain=d, **{k: v for k, v in data.items() if k != "domain"})
             db.add(record)
             db.flush()
