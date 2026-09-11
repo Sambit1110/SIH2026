@@ -160,3 +160,5 @@ Trace-X deliberately avoids overclaiming. IP geolocation and infrastructure corr
 physical identity or exact location of a person. Every attribution assessment in the UI and in
 generated reports states this explicitly and separates observation, evidence, inference, and
 attribution.
+The real question is: Where did it come from, what infrastructure is behind it, and how can we investigate it?
+That is exactly where Trace-X comes in.
